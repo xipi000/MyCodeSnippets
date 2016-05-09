@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>la</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 300, 300)];
+
+// 设置为多行显示
+label.numberOfLines = 0;
+
+NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+
+// 行间距设置为30
+[paragraphStyle  setLineSpacing:15];
+
+NSString  *testString = @"设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距设置Label的行间距";
+NSMutableAttributedString  *setString = [[NSMutableAttributedString alloc] initWithString:testString];
+[setString  addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [testString length])];
+
+// 设置Label要显示的text
+[label  setAttributedText:setString];
+
+
+[self.view addSubview:label];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BC200F0D-43BA-451A-8410-01C8D248DAD7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>设置Label间距</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

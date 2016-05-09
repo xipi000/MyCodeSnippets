@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>touchid</string>
+	<string>tou</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -14,12 +14,14 @@
     LAContext *context = [[LAContext alloc] init];
     
     NSError *error = nil;
-    NSString *result = @"Authentication is needed to access your notes.";
+    NSString *result = @"解锁以登录";
     
     // ------ 判断设置支持状态
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error]) {
         
         // ------ 支持指纹识别
+        // ------ LAPolicyDeviceOwnerAuthentication 用户必须同时设置了指纹和密码才能验证成功
+        // ------ LAPolicyDeviceOwnerAuthenticationWithBiometrics 用户必须设置了指纹
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:result reply:^(BOOL success, NSError * _Nullable error) {
             
             if (success) {// ------ 验证成功
@@ -60,9 +62,9 @@
                         break;
                     default:
                     {
-//                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//                            
-//                        }];
+                        //                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        //
+                        //                        }];
                         dispatch_async(dispatch_get_main_queue(), ^{
                             
                         });
@@ -100,14 +102,14 @@
     
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>659DA65A-3774-4774-8A5A-085125B623C3</string>
+	<string>C285FAFC-8DA5-450F-842B-457C6FC5574C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>指纹识别的方法</string>
+	<string>Touch ID方法</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

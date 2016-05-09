@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ba</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// ------ 1.隐藏默认的返回按钮
+    self.navigationItem.hidesBackButton = YES;
+    // ------ 2.隐藏自定义的左边按钮
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D3178D5E-DBC0-41CB-8707-7A6E48B20957</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>隐藏导航栏左边返回键按钮</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
