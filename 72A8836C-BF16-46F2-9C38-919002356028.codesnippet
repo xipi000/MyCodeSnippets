@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>formatPhoneNum</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - **************** 手机号码去掉+86
+- (NSString *)formatPhoneNum:(NSString *)phone
+{
+    if ([phone hasPrefix:@"86"]) {
+        NSString *formatStr = [phone substringWithRange:NSMakeRange(2, [phone length]-2)];
+        return formatStr;
+    }
+    else if ([phone hasPrefix:@"+86"])
+    {
+        if ([phone hasPrefix:@"+86 "]) {
+            NSString *formatStr = [phone substringWithRange:NSMakeRange(4, [phone length]-4)];
+            return formatStr;
+        }
+        else
+        {
+            NSString *formatStr = [phone substringWithRange:NSMakeRange(3, [phone length]-3)];
+            return formatStr;
+        }
+    }
+    return phone;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>72A8836C-BF16-46F2-9C38-919002356028</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>手机号码去掉+86</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

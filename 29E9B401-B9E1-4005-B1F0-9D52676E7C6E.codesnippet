@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>timestamp</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (NSString *)timestamp{
+    
+    //计算时间戳：
+    NSDate *date = [NSDate date];
+    
+    NSInteger timestamp = (NSInteger)[date timeIntervalSince1970];
+    
+    NSString *timestampString = [NSString stringWithFormat:@"%li",(long)timestamp];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY/MM/dd hh:mm:ss"];
+    NSLog(@"当前时间 : %@",[formatter stringFromDate:date]);
+    NSLog(@"当前时间戳 : %@",timestampString);
+    return timestampString;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>29E9B401-B9E1-4005-B1F0-9D52676E7C6E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>获取当前时间的时间戳</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

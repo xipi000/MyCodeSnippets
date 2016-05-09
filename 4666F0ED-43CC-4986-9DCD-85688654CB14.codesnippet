@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mainTable</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)initTableView {
+    
+    self.mainTB = ({
+    
+        self.mainTB = [[UITableView alloc] initWithFrame:CGRectMake(0, NAVI_HEIGHT + 34, kScreenWidth, kScreenHeight - NAVI_HEIGHT) style:UITableViewStylePlain];
+        self.mainTB.dataSource = self;
+        self.mainTB.delegate = self;
+        self.mainTB.backgroundColor = [UIColor whiteColor];
+        self.mainTB.showsVerticalScrollIndicator = NO;
+        self.mainTB.showsVerticalScrollIndicator = NO;
+        self.mainTB.separatorStyle = NO;
+        self.mainTB.rowHeight = 80;
+        self.mainTB.tableFooterView = nil;
+        [self.mainTB registerNib:[UINib nibWithNibName:@"PaymentHistoryCell" bundle:nil] forCellReuseIdentifier:cellID];
+        [self.view addSubview:self.mainTB];
+        self.mainTB;
+    });
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4666F0ED-43CC-4986-9DCD-85688654CB14</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>创建TableView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

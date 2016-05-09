@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>touchid</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)localAuthenticationAction {
+    
+    LAContext *context = [[LAContext alloc] init];
+    
+    NSError *error = nil;
+    NSString *result = @"Authentication is needed to access your notes.";
+    
+    // ------ 判断设置支持状态
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error]) {
+        
+        // ------ 支持指纹识别
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:result reply:^(BOOL success, NSError * _Nullable error) {
+            
+            if (success) {// ------ 验证成功
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                });
+                
+            } else {
+                
+                HMLog(@"reason : %@",error.localizedDescription);
+                
+                switch (error.code) {
+                        
+                    case LAErrorSystemCancel:
+                        HMLog(@"由于用户切换到了其他APP,导致应用被挂起,系统取消了Touch ID 验证");
+                        break;
+                    case LAErrorAppCancel:
+                        HMLog(@"当前应用被强制挂起,系统取消了Touch ID 验证");
+                        break;
+                    case LAErrorUserCancel:
+                        HMLog(@"用户取消了Touch ID 验证");
+                        break;
+                    case LAErrorUserFallback:
+                        HMLog(@"用户取消了Touch ID 验证,改用密码验证");
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            
+                        });
+                        break;
+                    case LAErrorTouchIDNotAvailable:
+                        HMLog(@"Touch ID 未开启");
+                        break;
+                    case LAErrorTouchIDLockout:
+                        HMLog(@"用户多次使用Touch ID错误,Touch ID被锁,用户需输入密码解锁");
+                        break;
+                    case LAErrorInvalidContext:
+                        HMLog(@"LAContext对象被释放,导致授权失败");
+                        break;
+                    default:
+                    {
+//                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                            
+//                        }];
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            
+                        });
+                    }
+                        break;
+                }
+            }
+            
+        }];
+        
+    } else {
+        
+        // ------ 机器不支持指纹识别
+        switch (error.code) {
+            case LAErrorTouchIDNotEnrolled:
+            {
+                NSLog(@"用户未录入Touch ID");
+                break;
+            }
+            case LAErrorPasscodeNotSet:
+            {
+                NSLog(@"系统未设置密码");
+                break;
+            }
+            default:
+            {
+                NSLog(@"获取Touch ID失败");
+                break;
+            }
+        }
+        
+        NSLog(@"失败:%@",error.localizedDescription);
+        
+    }
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>659DA65A-3774-4774-8A5A-085125B623C3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>指纹识别的方法</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

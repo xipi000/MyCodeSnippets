@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dispatch</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+                
+                [NETWORK getUserAllSettingWithProtocolBufferDataAndCallBack:^(id obj) {
+                    
+                    get_user_user_all_settings_response *response = obj;
+                    
+                    HMLog(@"登录成功后获取和昵称 : %@ ",[[NSString alloc] initWithData:response.nickname encoding:NSUTF8StringEncoding]);
+                    
+//                    [USER_DEFAULTS setObject:[[NSString alloc] initWithData:response.nickname encoding:NSUTF8StringEncoding] forKey:@"user_nickname"];
+//                    
+//                    [USER_DEFAULTS setObject:response.icon forKey:@"user_icon"];
+//                    
+//                    [USER_DEFAULTS synchronize];
+                }];
+                
+            });</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>34DAA9B9-6E09-4C6E-B7CF-E9632810EA6C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>GCD---新开一个线程</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

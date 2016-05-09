@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>alertView_block</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIAlertView *alertView = [[UIAlertView alloc] bk_initWithTitle:@"提示" message:@"提示信息"];
+[alertView bk_setCancelButtonWithTitle:@"取消" handler:nil];
+[alertView bk_addButtonWithTitle:@"确定" handler:nil];
+[alertView bk_setDidDismissBlock:^(UIAlertView *alert, NSInteger index) {
+    if (index == 1) {
+        NSLog(@"%ld clicked",index);
+    }
+}];
+[alertView show];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5D117564-0452-4DE7-83A3-60A8862EA6C4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIAlertView的block用法</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
