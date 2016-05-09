@@ -3,22 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dis</string>
+	<string>tq_init</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                
-                
-            });</string>
+	<string>    self = [super init];
+    if (self) {
+    }
+    return self;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BBCC0AAD-C897-4452-9E6A-8667835AFFE2</string>
+	<string>93934053-BDF5-48C3-8B7F-08EB04D69442</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>tq init code</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>GCD---延时加载</string>
+	<string>tq init code</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

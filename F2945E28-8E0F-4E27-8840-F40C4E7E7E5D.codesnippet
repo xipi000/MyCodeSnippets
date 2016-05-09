@@ -3,22 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dis</string>
+	<string>rrr</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                
-                
-            });</string>
+	<string>#pragma mark - Network Request Delegate
+
+- (void)requestFinished:(BaseRequest *)request {
+
+}
+
+- (void)requestFailed:(BaseRequest *)request {
+
+}
+
+- (void)clearRequest {
+
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BBCC0AAD-C897-4452-9E6A-8667835AFFE2</string>
+	<string>F2945E28-8E0F-4E27-8840-F40C4E7E7E5D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Network Request Delegate</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>GCD---延时加载</string>
+	<string>Network Request Delegate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

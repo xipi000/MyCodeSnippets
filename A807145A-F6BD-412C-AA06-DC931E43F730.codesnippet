@@ -3,22 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dis</string>
+	<string>hide_keyboard</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                
-                
-            });</string>
+	<string>- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BBCC0AAD-C897-4452-9E6A-8667835AFFE2</string>
+	<string>A807145A-F6BD-412C-AA06-DC931E43F730</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>hide keyboard when touch background</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>GCD---延时加载</string>
+	<string>收键盘方法一</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

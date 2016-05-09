@@ -3,22 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dis</string>
+	<string>iii</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                
-                
-            });</string>
+	<string>@interface &lt;#class name#&gt; (Private)
+&lt;#method#&gt;
+@end</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BBCC0AAD-C897-4452-9E6A-8667835AFFE2</string>
+	<string>27493307-0E64-4A11-A5F7-0A1D16532B71</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>GCD---延时加载</string>
+	<string>ELC Private Class Interface</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

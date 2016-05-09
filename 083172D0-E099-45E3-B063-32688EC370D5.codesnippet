@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dis</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// ------ 让后台两个线程并行执行,两个线程都执行结束后,再汇总执行结果
+    dispatch_group_t group = dispatch_group_create();
+    
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        
+        // ------ 并行执行的线程1
+    });
+    
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+       
+        // ------ 并行执行的线程2
+        
+    });
+    
+    dispatch_group_notify(group, dispatch_get_global_queue(0, 0), ^{
+        
+       // ------ 汇总结果
+        
+    });</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>083172D0-E099-45E3-B063-32688EC370D5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>GCD---让后台两个线程并行执行,两个线程都执行结束后,再汇总执行结果</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
