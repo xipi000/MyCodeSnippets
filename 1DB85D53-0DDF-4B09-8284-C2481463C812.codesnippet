@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>gif</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//方法1 使用webView（直接加载已有gif图片）
+    
+
+    NSString *filePath1 = [[NSBundle mainBundle]pathForResource:@"girl.gif" ofType:nil];
+
+    NSData *webGifData = [NSData dataWithContentsOfFile:filePath1];
+    
+    UIWebView *webView = [[UIWebView alloc]init];
+    
+    webView.frame = CGRectMake(100, 20, 100, 100);
+    
+    webView.backgroundColor = [UIColor blueColor];
+    
+    webView.scalesPageToFit = YES;
+    
+    //最好设置一下userInteractionEnabled这个属性
+    webView.userInteractionEnabled = NO;
+    
+    [webView loadData:webGifData MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    
+    [self.view addSubview:webView];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1DB85D53-0DDF-4B09-8284-C2481463C812</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>加载gif动画1</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

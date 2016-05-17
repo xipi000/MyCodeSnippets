@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>gif</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//方法三  如果你的项目中使用了SDwebImage第三方,导入"UIImage+GIF.h"头文件
+ 
+    NSString  *Path = [[NSBundle bundleWithPath:[[NSBundle mainBundle] bundlePath]] pathForResource:@"dog.gif" ofType:nil];
+    
+    NSData  *imageData = [NSData dataWithContentsOfFile:Path];
+    
+    UIImageView *sdImage = [UIImageView new];
+    
+    sdImage.image = [UIImage sd_animatedGIFWithData:imageData];
+
+
+    sdImage.frame = CGRectMake(100, 260, 150, 100);
+    
+    [self.view addSubview:sdImage];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D1C916EC-F730-425E-BD6B-523FF5691A10</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>加载gif动画3</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

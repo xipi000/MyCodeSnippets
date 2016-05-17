@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pr</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark peek &amp;&amp; pop 代理方法
+
+/** peek手势  */
+- (nullable UIViewController *)previewingContext:(id &lt;UIViewControllerPreviewing&gt;)previewingContext viewControllerForLocation:(CGPoint)location {
+    UIViewController *childVC = [[UIViewController alloc] init];
+    
+    // 获取用户手势点所在cell的下标。同时判断手势点是否超出tableView响应范围。
+    if (![self getShouldShowRectAndIndexPathWithLocation:location]) return nil;
+    
+    previewingContext.sourceRect = self.sourceRect;
+    
+    // 加个白色背景
+    UIView *bgView =[[UIView alloc] initWithFrame:CGRectMake(20, 10, __kScreenWidth - 40, __kScreenHeight - 20 - 64 * 2)];
+    bgView.backgroundColor = [UIColor whiteColor];
+    bgView.layer.cornerRadius = 10;
+    bgView.clipsToBounds = YES;
+    [childVC.view addSubview:bgView];
+    
+    // 加个lable
+    UILabel *lable = [[UILabel alloc] initWithFrame:bgView.bounds];
+    lable.textAlignment = NSTextAlignmentCenter;
+    lable.text = @"有种再按重一点...";
+    [bgView addSubview:lable];
+    
+    return childVC;
+}
+
+/** pop手势  */
+- (void)previewingContext:(id &lt;UIViewControllerPreviewing&gt;)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    [self tableView:self.tableView didSelectRowAtIndexPath:self.indexPath];
+}
+
+/** 获取用户手势点所在cell的下标。同时判断手势点是否超出tableView响应范围。*/
+- (BOOL)getShouldShowRectAndIndexPathWithLocation:(CGPoint)location {
+    NSInteger row = (location.y - 20)/50;
+    self.sourceRect = CGRectMake(0, row * 50 + 20, __kScreenWidth, 50);
+    self.indexPath = [NSIndexPath indexPathForItem:row inSection:0];
+    // 如果row越界了，返回NO 不处理peek手势
+    return row &gt;= self.items.count ? NO : YES;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7FF7F93C-D500-4CFE-AFA6-7C8595BDAC5A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>peek&amp;pop手势</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

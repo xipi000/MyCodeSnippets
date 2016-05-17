@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>gif</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//方法二 使用分组图（需要UI切图,图片起名字最好规范一些!!!）
+    
+    UIImageView *imagesView = [[UIImageView alloc]init];
+    
+    imagesView.frame = CGRectMake(100, 140, 100, 100);
+    
+    NSMutableArray *array  = [NSMutableArray new];
+    
+    for (int i = 0; i&lt;14; i++) {
+        
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"loading_0000%d",i]];
+        
+        [array addObject:image];
+    }
+    
+     imagesView.animationImages = array;
+    
+     imagesView.animationDuration = 0.5;
+    
+     imagesView.animationRepeatCount =  MAXFLOAT;//这里也可以设置重复次数.
+    
+     [imagesView startAnimating];
+    
+     [self.view addSubview: imagesView];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>98E8FE8E-1BE1-4506-8B7C-CD46D30F9906</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>加载gif动画2</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

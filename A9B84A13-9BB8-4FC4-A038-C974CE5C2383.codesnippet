@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>gif</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#warning mark----使用网络下载图片需要注意一下适配iOS9 ，http请求需要添加白名单，否则请求网络地址会被禁止
+    
+//方法四 从网络下载图片(这里使用的是SDwebimge方法)
+    
+    NSString *urlString = @"http://c.hiphotos.baidu.com/zhidao/pic/item/3801213fb80e7becf636ec082c2eb9389a506b6f.jpg";
+   
+    NSURL    *url       = [NSURL URLWithString:urlString];
+    
+    NSData   *data      = [NSData dataWithContentsOfURL:url];
+
+    UIImageView *imageView  = [[UIImageView alloc]init];
+    
+    imageView.frame = CGRectMake(100, 380, 150, 100);
+    
+    imageView.image = [UIImage sd_animatedGIFWithData:data];
+    
+    imageView.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:imageView];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A9B84A13-9BB8-4FC4-A038-C974CE5C2383</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>加载gif动画4</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
