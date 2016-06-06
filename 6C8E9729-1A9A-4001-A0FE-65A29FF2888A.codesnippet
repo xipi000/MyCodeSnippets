@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        label.numberOfLines = 0;//任意行数
+        //以下方法可以插入行间距。如果用label.text就不能插入行距，很难看。
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content];
+        
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        
+        //注意，每一行的行间距分两部分，topSpacing和bottomSpacing。
+        [paragraphStyle setLineSpacing:3.f];//调整行间距
+        
+        [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [content length])];
+        
+        label.attributedText = attributedString;
+        
+        CGSize size = [self sizeThatFits:CGSizeMake(label.frame.size.width, MAXFLOAT)];
+        
+        CGRect frame = label.frame;
+        
+        frame.size.height = size.height;
+        
+        [label setFrame:frame];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6C8E9729-1A9A-4001-A0FE-65A29FF2888A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>label行间距</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

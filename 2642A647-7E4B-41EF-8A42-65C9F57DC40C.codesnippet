@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>a</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - **************** 测试菊花
+    @property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(_mobileTF.width - 20 - 20,10,20,20)];
+    
+    [_mobileTF addSubview:self.activityIndicator];
+    
+    self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+    
+    [self.activityIndicator startAnimating];
+    
+    [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(timerStop) userInfo:nil repeats:YES];
+
+
+
+
+
+- (void)timerStop {
+    
+    [self.activityIndicator stopAnimating];
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2642A647-7E4B-41EF-8A42-65C9F57DC40C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>原生菊花</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
