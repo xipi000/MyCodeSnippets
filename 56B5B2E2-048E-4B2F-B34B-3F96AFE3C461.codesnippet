@@ -3,19 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>c</string>
+	<string>f</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, copy) NSString *&lt;#name#&gt;;</string>
+	<string>    for(NSString *familyName in [UIFont familyNames]){
+        NSLog(@"Font FamilyName = %@",familyName); //输出字体族科名字
+
+        for(NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+            NSLog(@"\t%@",fontName);         //输出字体族科下字样名字
+        }
+    }
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4C468E32-7AEC-4E14-AD02-6DF2CC5F4C50</string>
+	<string>56B5B2E2-048E-4B2F-B34B-3F96AFE3C461</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>声明copy属性</string>
+	<string>打印出所有字体名字</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

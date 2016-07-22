@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>i</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (BOOL)isChineseCharacterAndLettersAndNumbersAndUnderScore:(NSString *)string
+{
+    NSString *other = @"";
+    NSInteger len = string.length;
+    for(int i=0;i&lt;len;i++)
+    {
+        unichar a=[string characterAtIndex:i];
+        if(!((isalpha(a))
+             ||(isalnum(a))
+             ||((a=='_'))
+             ||((a &gt;= 0x4e00 &amp;&amp; a &lt;= 0x9fa6))
+             ||([other rangeOfString:string].location != NSNotFound)
+             ||((a=='@'))
+             ||((a=='#'))
+             ))
+            return NO;
+    }
+    return YES;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>98DA794D-0A06-4DA5-A885-36C8BF008E38</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>检查是否包含特殊字符</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
