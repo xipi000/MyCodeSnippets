@@ -3,31 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>isNot</string>
+	<string>time</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - **************** 判断字符串是否为空
-+ (BOOL)stringIsNotEmpty:(NSString *)str {
-    
-    if (![str isEqualToString:@""] || str != nil || ![str isEqual:[NSNull null]]) {
-        
-        return YES;
-        
-    } else return NO;
-    
-}</string>
+	<string>//获取当前的时间戳
+    NSDate* date1 = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[date1  timeIntervalSince1970]*1000; // *1000 是精确到毫秒，不乘就是精确到秒
+    NSString *timeString = [NSString stringWithFormat:@"%.0f", a]; //转为字符型
+    _timestampTime.text = timeString;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>935BB977-969C-4A40-AB87-99ED05627EEF</string>
+	<string>ECA62C0E-FA99-40B5-9121-0A97E294C11C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>判断字符串是否为空</string>
+	<string>获取当前的时间戳2</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

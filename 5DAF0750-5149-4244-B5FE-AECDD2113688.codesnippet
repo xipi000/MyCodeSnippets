@@ -3,31 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>isNot</string>
+	<string>time</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - **************** 判断字符串是否为空
-+ (BOOL)stringIsNotEmpty:(NSString *)str {
-    
-    if (![str isEqualToString:@""] || str != nil || ![str isEqual:[NSNull null]]) {
-        
-        return YES;
-        
-    } else return NO;
-    
-}</string>
+	<string>NSString *str = @"2016-11-25 23:46:10";
+    long time;
+    NSDateFormatter *format=[[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *fromdate=[format dateFromString:str];
+    time = (long)[fromdate timeIntervalSince1970]*1000;
+    _resultOne.text = [NSString stringWithFormat:@"%ld",time];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>935BB977-969C-4A40-AB87-99ED05627EEF</string>
+	<string>5DAF0750-5149-4244-B5FE-AECDD2113688</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>判断字符串是否为空</string>
+	<string>将时间转为时间戳2</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

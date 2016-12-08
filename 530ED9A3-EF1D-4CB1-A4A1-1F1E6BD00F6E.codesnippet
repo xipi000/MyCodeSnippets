@@ -3,31 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>isNot</string>
+	<string>time</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - **************** 判断字符串是否为空
-+ (BOOL)stringIsNotEmpty:(NSString *)str {
-    
-    if (![str isEqualToString:@""] || str != nil || ![str isEqual:[NSNull null]]) {
-        
-        return YES;
-        
-    } else return NO;
-    
-}</string>
+	<string>NSString *timePoor = [self getTime:@"1480082473171" endTime:@"1480084609406"];
+    _resultThree.text =  timePoor;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>935BB977-969C-4A40-AB87-99ED05627EEF</string>
+	<string>530ED9A3-EF1D-4CB1-A4A1-1F1E6BD00F6E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>判断字符串是否为空</string>
+	<string>求两个时间戳之间的差值</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
