@@ -18,11 +18,10 @@
         self.mainTB.delegate = self;
         self.mainTB.backgroundColor = [UIColor whiteColor];
         self.mainTB.showsVerticalScrollIndicator = NO;
-        self.mainTB.showsVerticalScrollIndicator = NO;
-        self.mainTB.separatorStyle = NO;
-        self.mainTB.rowHeight = 80;
-        self.mainTB.tableFooterView = nil;
-        [self.mainTB registerNib:[UINib nibWithNibName:@"PaymentHistoryCell" bundle:nil] forCellReuseIdentifier:cellID];
+        self.mainTB.showsHorizontalScrollIndicator = NO;
+        self.mainTB.rowHeight = 44;
+        self.mainTB.tableFooterView = [UIView new];
+        [self.mainTB registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:@"cell"];
         [self.view addSubview:self.mainTB];
         self.mainTB;
     });

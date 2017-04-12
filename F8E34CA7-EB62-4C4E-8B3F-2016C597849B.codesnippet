@@ -3,22 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>time</string>
+	<string>gg</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSString *str= _resultOne.text;//时间戳
-    NSTimeInterval time=[str doubleValue]/1000 +28800;
- NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:time];
-    _resultTwo.text = [NSString stringWithFormat:@"%@",confromTimesp] ;</string>
+	<string>// ------ &lt;#单行注释#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1AADBA18-03F7-4F92-AD7B-AF0FAA2E9B9B</string>
+	<string>F8E34CA7-EB62-4C4E-8B3F-2016C597849B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>将时间戳转为时间2</string>
+	<string>单行注释（swift版）</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
